@@ -18,7 +18,7 @@
     $channel = iconv('UTF-8', 'ASCII//IGNORE',  normalizer_normalize($channel, Normalizer::NFKD));
     $channel = strtolower($channel);
     $channel = str_replace(array('&', '+', '*'), array('and', 'plus', 'star'), $channel);
-    $channel = preg_replace('/[^a-z0-9]/', '', $channel);
+    $channel = '800x450/default/transparent/' . preg_replace('/[^a-z0-9]/', '', $channel);
     return $channel;
   }
 
